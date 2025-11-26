@@ -32,7 +32,7 @@ export function formatHashtag(hashtag: string): { formatted: string; encoded: st
 }
 
 /**
- * 트위터 검색 URL 생성
+ * X 검색 URL 생성
  */
 export function buildSearchUrl(encodedQuery: string): string {
   return `https://twitter.com/search?q=${encodedQuery}&src=typed_query&f=live`

@@ -102,8 +102,8 @@ export async function runCrawler(
     logCallback?.(`이동 중: ${searchUrl}`)
 
     // 4. 로그인 대기
-    statusCallback?.('로그인 대기 중... (트위터에 로그인하세요)')
-    logCallback?.('트위터 로그인을 진행해주세요...')
+    statusCallback?.('로그인 대기 중... (X에 로그인하세요)')
+    logCallback?.('X 로그인을 진행해주세요...')
     logCallback?.('(최대 5분 대기)')
 
     const loginSuccess = await waitForLogin(page, searchUrl, logCallback)
