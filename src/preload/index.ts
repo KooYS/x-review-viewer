@@ -4,8 +4,14 @@ import { contextBridge, ipcRenderer } from 'electron'
 export type IpcChannels = {
   // Main -> Renderer
   'app:message': (message: string) => void
+  'crawler-log': (log: string) => void
+  'crawler-status': (status: string) => void
   // Renderer -> Main (invoke)
   'app:getVersion': () => Promise<string>
+  'start-crawling': (params: {
+    hashtag: string
+    tweetCount: number
+  }) => Promise<{ success: boolean; message: string }>
   // Renderer -> Main (send)
   'app:log': (level: string, message: string) => void
 }
